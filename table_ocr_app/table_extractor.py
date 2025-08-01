@@ -33,9 +33,10 @@ class TableOCRExtractor:
         st.subheader("🟩 حدد منطقة الجدول داخل الصورة")
         self.cropped_image = st_cropper(
             self.image,
-            realtime_update=True,
+            realtime_update=False,
             box_color='#00FF00',
-            aspect_ratio=None
+            aspect_ratio=None,
+            stroke_width=1
         )
         st.image(self.cropped_image, caption="📐 الجزء المحدد من الصورة")
 
